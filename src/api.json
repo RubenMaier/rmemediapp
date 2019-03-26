@@ -1,0 +1,140 @@
+{
+    "categorias": [
+        {
+            "id": 1,
+            "categoria": "Advengers",
+            "playlist": [
+                {
+                    "titulo": "The Avengers",
+                    "anio": "2012",
+                    "descripcion": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/the-avengers.jpg",
+                    "trailer": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/mp4/the-avengers.mp4",
+                    "id": 1
+                },
+                {
+                    "titulo": "Avengers: Age of Ultron",
+                    "anio": "2015",
+                    "descripcion": "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/avengers-age-of-ultron.jpg",
+                    "trailer": "",
+                    "id": 2
+                },
+                {
+                    "titulo": "Avengers: Infinity War",
+                    "anio": "2018",
+                    "descripcion": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/avengers-infinity-war.jpg",
+                    "trailer": "",
+                    "id": 3
+                },
+                {
+                    "titulo": "Avengers: Endgame",
+                    "anio": "2019",
+                    "descripcion": "After the devastating events of Vengadores: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to undo Thanos' actions and restore order to the universe.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/avengers-endgame.jpg",
+                    "trailer": "",
+                    "id": 4
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "categoria": "Iron Man",
+            "playlist": [
+                {
+                    "titulo": "Iron Man",
+                    "anio": "2008",
+                    "descripcion": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/iron-man.jpg",
+                    "trailer": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/mp4/iron-man.mp4",
+                    "id": 1
+                },
+                {
+                    "titulo": "Iron Man 2",
+                    "anio": "2010",
+                    "descripcion": "With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/iron-man-2.jpg",
+                    "trailer": "",
+                    "id": 1
+                },
+                {
+                    "titulo": "Iron Man 3",
+                    "anio": "2013",
+                    "descripcion": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/iron-man-3.jpg",
+                    "trailer": "",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "categoria": "Capitan America",
+            "playlist": [
+                {
+                    "titulo": "Captain America: The First Avenger",
+                    "anio": "2011",
+                    "descripcion": "Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a 'Super-Soldier serum'. But being Captain America comes at a price as he attempts to take down a war monger and a terrorist organization.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/captain-america-the-first-avenger.jpg",
+                    "trailer": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/mp4/captain-america-the-first-avenger.mp4",
+                    "id": 1
+                },
+                {
+                    "titulo": "Captain America: The Winter Soldier",
+                    "anio": "2014",
+                    "descripcion": "As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat from history: an assassin known as the Winter Soldier.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/captain-america-the-winter-soldier.jpg",
+                    "trailer": "",
+                    "id": 2
+                },
+                {
+                    "titulo": "Captain America: Civil War",
+                    "anio": "2016",
+                    "descripcion": "Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/captain-america-civil-war.jpg",
+                    "trailer": "",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "categoria": "Thor",
+            "playlist": [
+                {
+                    "titulo": "Thor",
+                    "anio": "2011",
+                    "descripcion": "The powerful, but arrogant god Thor, is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/thor.jpg",
+                    "trailer": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/mp4/thor.mp4",
+                    "id": 1
+                },
+                {
+                    "titulo": "Thor: The Dark World",
+                    "anio": "2013",
+                    "descripcion": "When Dr. Jane Foster gets cursed with a powerful entity known as the Aether, Thor is heralded of the cosmic event known as the Convergence and the genocidal Dark Elves.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/thor-the-dark-world.jpg",
+                    "trailer": "",
+                    "id": 2
+                },
+                {
+                    "titulo": "Team Thor",
+                    "anio": "2016",
+                    "descripcion": "The story of what the hammer-wielding Nordic god Thor was up to while the rest of the Avengers were battling each other in 'Captain America: Civil War'. He moves into a flat with office worker Darryl Jacobson in Australia.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/team-thor.jpg",
+                    "trailer": "",
+                    "id": 3
+                },
+                {
+                    "titulo": "Thor: Ragnarok",
+                    "anio": "2017",
+                    "descripcion": "Thor is imprisoned on the planet Sakaar, and must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela.",
+                    "img": "https://rubenmaier.github.io/api-simplificada-trailers-marvel/img/thor-ragnarok.jpg",
+                    "trailer": "",
+                    "id": 4
+                }
+            ]
+        }
+    ]
+}

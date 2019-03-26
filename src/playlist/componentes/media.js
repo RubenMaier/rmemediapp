@@ -12,7 +12,7 @@ class Media extends Component {
     accionarDelClick = (event) => {
         console.log(this.props.titulo)
         console.log(this.props.descripcion)
-        console.log(this.props.imagen)
+        console.log(this.props.img)
         // el metodo del siguiente atributo me actualiza el estado que le indique
         this.setState({
             titulo: 'Me hiciste click'
@@ -32,7 +32,7 @@ class Media extends Component {
             <div className="Media"> {/*no podemos utilizar el típico atributo "class" porque ahora son propiedades y class en javascript define una clase. Otra cosa, en formatos jsx tenemos que comentar asi como lo estoy haciendo, es un asco*/}
                 <div style={estilo.contenedor} onClick={this.accionarDelClick}> {/* En este caso agregamos el estilo sin la necesidad de importarlo. Por otro lado "enlazamos eventos del Dom" puesto que al hacerle click se ejecutara la funcion accionarDelClick*/}
                     <img
-                        src={this.props.imagen}
+                        src={this.props.img}
                         alt=""
                         width={210}
                         height={300}
@@ -46,9 +46,9 @@ class Media extends Component {
 }
 
 Media.propTypes = { // atributo que añadimos con una librería extra que añadimos para anticipar posibles problemas
-    imagen: PropTypes.string,
+    img: PropTypes.string,
     titulo: PropTypes.string,
-    autor: PropTypes.string,
+    descripcion: PropTypes.string,
 }
 
 export default Media

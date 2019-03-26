@@ -4,9 +4,9 @@
 
 # Utilidades
 ```
-npm install --save-dev babel-preset-react
-npm install react react-dom
-npm install prop-types
+npm i --save-dev babel-preset-react
+npm i react react-dom
+npm i prop-types
 ```
 
 `babel-preset-react` es un loader para poder trabajar con react.js en un archivo javascript convencional
@@ -21,6 +21,8 @@ npm install prop-types
     - Componentes
     - 2 formas de insertar estilos en JSX
     - Propiedades de Componentes
-    - Validación de tipado de propiedades con `prop-types``
+    - Validación de tipado de propiedades con `prop-types`
     - Enlazado de eventos del DOM
     - Estados de los componentes
+- Utilizando componentes
+    - Incluyendo api para estudiar listas
