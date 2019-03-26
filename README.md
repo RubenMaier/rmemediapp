@@ -25,4 +25,5 @@ npm i prop-types
     - Enlazado de eventos del DOM
     - Estados de los componentes
 - Utilizando componentes
-    - Incluyendo api para estudiar listas
+    - Inclusión de api para practicar con listas de componentes
+    - Actualización de componentes a tipo "funcional" o tipo "puros" para optimizar rendimiento

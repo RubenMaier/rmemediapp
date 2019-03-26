@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import './media.css' // de aca importamos un estilo que lo añadimos como una clase de estilo tradicional
 import PropTypes from 'prop-types'
-// tenemos componentes: funcionales, puros y de estados (normal)
 
-class Media extends Component {
+// convertimos este componente en un componente "puro", y la diferencia principal radica en que este componente va a tener el "shouldComponenteUpdate" ya asignado, si a este componente no se le actualizan las propiedades no tengo que validarlo yo a mano, sino que lo hace solo. Este componente ya nos e va a re-renderizar si recibe las mismas propiedades que tenia anteriormente
+class Media extends PureComponent {
     // las propiedades de un componente no cambian, para eso definimos los estados, que son el canal por el cual podemos actualizar un componente
     state = { // por defecto tendra el que le manda el componente cuando lo carga
         titulo: this.props.titulo
