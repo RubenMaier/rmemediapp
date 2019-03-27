@@ -17,7 +17,7 @@ module.exports = (env) => {
     return {
 
         entry: {
-            "rme-media-app": path.resolve(__dirname, 'index.js'),
+            "index": path.resolve(__dirname, 'src/entradas/index.js'),
         },
         output: {
             path: path.resolve(__dirname, 'dist'),

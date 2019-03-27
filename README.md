@@ -29,3 +29,17 @@ npm i prop-types
     - Actualización de componentes a tipo "funcional" o tipo "puros" para optimizar rendimiento
     - Separamos los componentes en una metodología comprendida como "componentes inteligentes" (contenedores: componentes con estado) y "componentes tontos" (componentes: puros o funcionales)
     - Composición de componentes
+
+
+#Estructura de componentes
+
+entry point: home
+
+- Home: contenedor
+    - Layout: componente
+    - Categorias: componente
+        - Categoria: componente
+            - Playlist: componente
+                - Media: componente
+    - Busqueda: contenedor
+    - Modal: contenedor
