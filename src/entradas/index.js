@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import Index from '../paginas/contenedores/index'
 import datos from '../api.json'
 
-const app = document.getElementById('app')
+const index = document.getElementById('index')
 
-render(<Index datos={datos} />, app)
+// que voy a renderizar, donde
+render(<Index datos={datos} />, index)

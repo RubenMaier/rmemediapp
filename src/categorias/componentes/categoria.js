@@ -4,7 +4,10 @@ function Categoria(props) {
     return (
         <div>
             <h2>{props.categoria}</h2>
-            <Playlist playlist={props.playlist} />
+            <Playlist
+                playlist={props.playlist}
+                manejoDeAperturaPorClick={props.manejoDeAperturaPorClick}
+            />
         </div>
     )
 }

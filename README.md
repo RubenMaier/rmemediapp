@@ -29,6 +29,8 @@ npm i prop-types
     - Actualización de componentes a tipo "funcional" o tipo "puros" para optimizar rendimiento
     - Separamos los componentes en una metodología comprendida como "componentes inteligentes" (contenedores: componentes con estado) y "componentes tontos" (componentes: puros o funcionales)
     - Composición de componentes
+    - Inclusión mediante 'portales' en react.js, de una ventana de dialogo para visualizar a futuro los videos con el reproductor de video
+    - Enlazado de componentes para cerrar y abrir la ventana de dialogo
 
 
 #Estructura de componentes
@@ -42,4 +44,5 @@ entry point: home -> Principal
             - Playlist: componente UI
                 - Media: componente UI
     - Busqueda: contenedor
-    - Modal: contenedor
+    - Dialogo: contenedor
+    - Dialogo: componente UI

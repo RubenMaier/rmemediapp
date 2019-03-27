@@ -7,7 +7,13 @@ function Playlist(props) {
         <div>
             {
                 props.playlist.map((item) => {
-                    return <Media {...item} key={item.id} />
+                    return (
+                        <Media
+                            {...item}
+                            menejoDelClick={props.manejoDeAperturaPorClick}
+                            key={item.id}
+                        />
+                    )
                 })
             }
         </div>
