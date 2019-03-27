@@ -27,3 +27,5 @@ npm i prop-types
 - Utilizando componentes
     - Inclusión de api para practicar con listas de componentes
     - Actualización de componentes a tipo "funcional" o tipo "puros" para optimizar rendimiento
+    - Separamos los componentes en una metodología comprendida como "componentes inteligentes" (contenedores: componentes con estado) y "componentes tontos" (componentes: puros o funcionales)
+    - Composición de componentes
