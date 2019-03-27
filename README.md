@@ -33,13 +33,13 @@ npm i prop-types
 
 #Estructura de componentes
 
-entry point: home
+entry point: home -> Principal
 
-- Home: contenedor
-    - Layout: componente
-    - Categorias: componente
-        - Categoria: componente
-            - Playlist: componente
-                - Media: componente
+- Index: contenedor
+    - Principal: componente UI
+    - Categorias: componente UI
+        - Categoria: componente UI
+            - Playlist: componente UI
+                - Media: componente UI
     - Busqueda: contenedor
     - Modal: contenedor

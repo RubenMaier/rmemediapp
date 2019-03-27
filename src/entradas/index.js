@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Principal from '../paginas/contenedores/principal'
+import Index from '../paginas/contenedores/index'
 import datos from '../api.json'
 
 const app = document.getElementById('app')
 
-render(<Principal datos={datos} />, app)
+render(<Index datos={datos} />, app)
