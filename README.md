@@ -31,7 +31,8 @@ npm i prop-types
     - Composición de componentes
     - Inclusión mediante 'portales' en react.js, de una ventana de dialogo para visualizar a futuro los videos con el reproductor de video
     - Enlazado de componentes para cerrar y abrir la ventana de dialogo
-    - Manejo de errores 
+    - Manejo de errores
+    - Referencias a eventos de HTML y Formularios
 
 
 #Estructura de componentes
