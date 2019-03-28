@@ -4,6 +4,7 @@ import Categorias from '../categorias/Categorias'
 import DialogoContenedor from '../herramientas/DialogoContenedor'
 import Dialogo from '../herramientas/Dialogo'
 import ErrorContenedor from '../errores/ErrorContenedor'
+import ReproductorContenedor from '../reproductor/ReproductorContenedor';
 
 class PrincipalContenedor extends Component {
     state = {
@@ -23,6 +24,7 @@ class PrincipalContenedor extends Component {
         return (
             <ErrorContenedor>
                 <Principal>
+                    <ReproductorContenedor />
                     <Categorias
                         categorias={this.props.datos.categorias}
                         manejoDeAperturaPorClick={this.manejoDeAperturaPorClick}

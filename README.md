@@ -33,6 +33,8 @@ npm i prop-types
     - Enlazado de componentes para cerrar y abrir la ventana de dialogo
     - Manejo de errores
     - Referencias a eventos de HTML y Formularios
+- Creacion de un reproductor de video
+    - Iniciando el reproductor de video con logica de Reproductor
 
 
 #Estructura de componentes

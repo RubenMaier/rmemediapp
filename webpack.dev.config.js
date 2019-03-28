@@ -11,6 +11,7 @@ module.exports = {
     devServer: {
         port: 9000,
     },
+    devtool: 'eval-source-map', // me permite depurar mejor donde estan los errores con los componentes cuando no pueden renderearse
     module: {
         rules: [
             {
