@@ -25,7 +25,6 @@ class BuscadorContenedor extends Component {
                 manejadorDeCambios={this.manejadorDeCambios}
                 valor={this.state.valor}
             />
-            
         )
     }
 }

@@ -35,6 +35,8 @@ npm i prop-types
     - Referencias a eventos de HTML y Formularios
 - Creacion de un reproductor de video
     - Iniciando el reproductor de video con logica de Reproductor
+    - Añadido de componente de titulo
+    - Inclusión del botón Play y Pausa con su accionar
 
 
 #Estructura de componentes
