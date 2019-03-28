@@ -31,18 +31,9 @@ npm i prop-types
     - Composición de componentes
     - Inclusión mediante 'portales' en react.js, de una ventana de dialogo para visualizar a futuro los videos con el reproductor de video
     - Enlazado de componentes para cerrar y abrir la ventana de dialogo
+    - Manejo de errores 
 
 
 #Estructura de componentes
 
-entry point: home -> Principal
-
-- Index: contenedor
-    - Principal: componente UI
-    - Categorias: componente UI
-        - Categoria: componente UI
-            - Playlist: componente UI
-                - Media: componente UI
-    - Busqueda: contenedor
-    - Dialogo: contenedor
-    - Dialogo: componente UI
+Opté por cambiar la organización del proyecto por una cuestión de comodidad. Como el proyecto es pequeño conviene tener una carpeta componente que contenga todos los componentes sin discriminar entre componentes "tontos" e "inteligentes", con la salvedad de que aquellos que tengan propiedades "inteligentes" lleven el nombre de "Contenedores" concatenado al nombre propio que tenga el componente.

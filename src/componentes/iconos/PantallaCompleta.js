@@ -1,5 +1,5 @@
 import React from 'react'
-import Icono from './icono'
+import Icono from './Icono'
 
 function PantallaCompleta(props) {
     // la etiqueta path es la que diferencia como se ven nuestros .svg

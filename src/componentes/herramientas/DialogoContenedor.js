@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { createPortal } from 'react-dom'
 
-class Dialogo extends Component {
+class DialogoContenedor extends Component {
     render() {
         // retornamos un portal
         const dialogo = document.getElementById('dialogo')
@@ -10,4 +10,4 @@ class Dialogo extends Component {
     }
 }
 
-export default Dialogo
+export default DialogoContenedor
