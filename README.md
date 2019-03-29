@@ -36,7 +36,7 @@ npm i prop-types
 - Creacion de un reproductor de video
     - Iniciando el reproductor de video con logica de Reproductor
     - Añadido de componente de titulo
-    - Inclusión del botón Play y Pausa con su accionar
+    - Inclusión del botón Play y Pausa (accionar y lógica de componentes necesaria)
 
 
 #Estructura de componentes

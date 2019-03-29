@@ -10,12 +10,12 @@ class PrincipalContenedor extends Component {
     state = {
         dialogoVisible: false
     }
-    manejoDeCierrePorClick = (event) => {
+    cerrarVentana = (event) => {
         this.setState({
             dialogoVisible: false
         })
     }
-    manejoDeAperturaPorClick = (event) => {
+    abrirVentana = (event) => {
         this.setState({
             dialogoVisible: true
         })
@@ -24,15 +24,17 @@ class PrincipalContenedor extends Component {
         return (
             <ErrorContenedor>
                 <Principal>
-                    <ReproductorContenedor />
+                    <ReproductorContenedor 
+                        autoreproduccion={true}
+                    />
                     <Categorias
                         categorias={this.props.datos.categorias}
-                        manejoDeAperturaPorClick={this.manejoDeAperturaPorClick}
+                        manejoDeAperturaPorClick={this.abrirVentana}
                     />
                     {
                         this.state.dialogoVisible && // Si se cumple hace esto, si no se cumple en ves de poner '&&' deberia haber puesto '?' y luego al finalizar el html que ejecuta en la parte del true, pongo ':' para colocar la accion del caso false
                         <DialogoContenedor>
-                            <Dialogo manejoDelClick={this.manejoDeCierrePorClick}>
+                            <Dialogo manejoDelClick={this.cerrarVentana}>
 
                             </Dialogo>
                         </DialogoContenedor>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Reproductor from './Reproductor'
-import Video from './Video'
+import VideoContenedor from './VideoContenedor'
 import Titulo from './Titulo'
 import PlayPausa from './PlayPausa'
 
@@ -8,9 +8,14 @@ class ReproductorContenedor extends Component {
     state = {
         pausa: true
     }
-    manejadorDeClick = (evento) => {
+    CambiarEstadoDeReproduccion = (evento) => {
         this.setState({
             pausa: !this.state.pausa
+        })
+    }
+    componentDidMount () {
+        this.setState({
+            pausa: (!this.props.autoreproduccion)
         })
     }
     render() {
@@ -21,11 +26,12 @@ class ReproductorContenedor extends Component {
                 />
                 <PlayPausa 
                     pausa={this.state.pausa}
-                    manejadorDeClick={this.manejadorDeClick}
+                    manejadorDeClick={this.CambiarEstadoDeReproduccion}
                 />
-                <Video
+                <VideoContenedor
                     sonido={true}
-                    autoreproduccion={true}
+                    autoreproduccion={this.props.autoreproduccion}
+                    pausa={this.state.pausa}
                     mp4="https://rubenmaier.github.io/api-simplificada-trailers-marvel/mp4/the-avengers.mp4"
                 />
             </Reproductor>
