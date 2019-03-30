@@ -2,7 +2,11 @@ import React, { PureComponent } from 'react'
 import './media.css' // de aca importamos un estilo que lo añadimos como una clase de estilo tradicional
 import PropTypes from 'prop-types'
 
+
 class Media extends PureComponent {
+    recibiUnClick = (evento) => {
+        this.props.menejoDelClick(this.props)
+    }
     render() {
         // también los estilos son creados como un objeto e insertados como "style" en las etiquetas html
         const estilo = {
@@ -16,7 +20,7 @@ class Media extends PureComponent {
             <div className="Media"> {/*no podemos utilizar el típico atributo "class" porque ahora son propiedades y class en javascript define una clase. Otra cosa, en formatos jsx tenemos que comentar asi como lo estoy haciendo, es un asco*/}
                 <div 
                     style={estilo.contenedor} 
-                    onClick={this.props.menejoDelClick}
+                    onClick={this.recibiUnClick}
                 > 
                 {/* En este caso agregamos el estilo sin la necesidad de importarlo. Por otro lado "enlazamos eventos del Dom" puesto que al hacerle click se ejecutara la funcion accionarDelClick*/}
                     <img

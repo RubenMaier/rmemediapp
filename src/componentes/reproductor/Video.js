@@ -12,7 +12,7 @@ function Video (props) {
                 onTimeUpdate={props.onTimeUpdate}
                 onSeeking={props.onSeeking} // me estoy moviendo
                 onSeeked={props.onSeeked} // ya termine de hacer ese movimiento
-                src={props.mp4}
+                src={props.trailer}
             />
         </div>
     )

@@ -43,10 +43,11 @@ npm i detect-browser
     - Creación del componente y la lógica de la barra de progreso del tiempo
     - Creación del componente y la lógica del Spinner (Cargando)
     - Creación componente de para control de volumen y su correspondiente lógica
-    - Creación del componente y la lógica de FullScreen.
+    - Creación del componente y la lógica de FullScreen
     - Inclusión del modulo `detect-browser`
+    - Finalización de enlace de video y titulos en el reproductor en función al componente Media
 
 
-#Estructura de componentes
+# Estructura de componentes
 
 Opté por cambiar la organización del proyecto por una cuestión de comodidad. Como el proyecto es pequeño conviene tener una carpeta componente que contenga todos los componentes sin discriminar entre componentes "tontos" e "inteligentes", con la salvedad de que aquellos que tengan propiedades "inteligentes" lleven el nombre de "Contenedores" concatenado al nombre propio que tenga el componente.

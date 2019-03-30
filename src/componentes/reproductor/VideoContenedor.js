@@ -27,7 +27,7 @@ class VideoContenedor extends Component {
                 onTimeUpdate={this.props.onTimeUpdate}
                 onSeeking={this.props.onSeeking}
                 onSeeked={this.props.onSeeked}
-                mp4={this.props.mp4}
+                trailer={this.props.trailer}
             />
         )
     }

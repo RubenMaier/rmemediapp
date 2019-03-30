@@ -17,6 +17,7 @@ class ReproductorContenedor extends Component {
         pausa: false,
         duracion: 0,
         cargando: false,
+        tiempoTranscurrido: 0,
         volumen: 1,
         volumenGuardado: 1
     }
@@ -79,7 +80,7 @@ class ReproductorContenedor extends Component {
                 setearReferencia={this.setearReferencia}
             >
                 <Titulo 
-                    titulo="Algo harcodeado"
+                    titulo={this.props.titulo}
                 />
                 <BarraDeControles>
                     <PlayPausa 
@@ -114,7 +115,7 @@ class ReproductorContenedor extends Component {
                     onTimeUpdate={this.actualizarTiempoTranscurrido}
                     onSeeking={this.cargandoDatos}
                     onSeeked={this.CargaDeDatosFinalizada}
-                    mp4="https://rubenmaier.github.io/api-simplificada-trailers-marvel/mp4/the-avengers.mp4"
+                    trailer={this.props.trailer}
                 />
             </Reproductor>
         )
