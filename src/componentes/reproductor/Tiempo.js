@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Tiempo(props){
+function Tiempo(props) {
     return (
         <div>
             <p>
-                <span>00 / {props.duracion}</span>
+                <span>{props.tiempoTranscurrido} | {props.duracion}</span>
             </p>
         </div>
     )

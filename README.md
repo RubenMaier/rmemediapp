@@ -38,6 +38,7 @@ npm i prop-types
     - Añadido de componente de titulo
     - Inclusión del botón Play y Pausa (accionar y lógica de componentes necesaria)
     - Creación de componente indicador de duración del tiempo y componente contenedor de botones de control
+    - Añadido de tiempo transcurrido y formateo de tiempo
 
 
 #Estructura de componentes

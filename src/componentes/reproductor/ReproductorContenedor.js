@@ -5,23 +5,28 @@ import Titulo from './Titulo'
 import PlayPausa from './PlayPausa'
 import Tiempo from './Tiempo'
 import BarraDeControles from './BarraDeControles'
+import {formatearTiempo} from '../../utilidades/tiempo'
 
 class ReproductorContenedor extends Component {
     state = {
         pausa: true,
         duracion: 0
     }
-    CambiarEstadoDeReproduccion = (evento) => {
+    cambiarEstadoDeReproduccion = (evento) => {
         this.setState({
             pausa: !this.state.pausa
         })
     }
-    controlarMetadata = (evento) => {
+    actualizarDuracionTotal = (evento) => {
         // cuando la metadata sea cargada el "evento" contendrá quien disparo ese evento (en este caso es videoContenedor)
-        this.video = evento.target
-        console.log(evento.target)
+        this.video = evento.target // el target contiene el elemento del DOM que emitió el evento
         this.setState({
-            duracion: this.video.duration
+            duracion: formatearTiempo(this.video.duration) // extraigo la duracion total del video y la almaceno en una variable local para actualizar la barra de controles
+        })
+    }
+    actualizarTiempoTranscurrido = (evento) => {
+        this.setState({
+            tiempoTranscurrido: formatearTiempo(this.video.currentTime)
         })
     }
     componentDidMount () {
@@ -38,17 +43,19 @@ class ReproductorContenedor extends Component {
                 <BarraDeControles>
                     <PlayPausa 
                         pausa={this.state.pausa}
-                        manejadorDeClick={this.CambiarEstadoDeReproduccion}
+                        manejadorDeClick={this.cambiarEstadoDeReproduccion}
                     />
                     <Tiempo 
                         duracion={this.state.duracion}
+                        tiempoTranscurrido={this.state.tiempoTranscurrido}
                     />
                 </BarraDeControles>
                 <VideoContenedor
                     sonido={true}
                     autoreproduccion={this.props.autoreproduccion}
                     pausa={this.state.pausa}
-                    metadata={this.controlarMetadata}
+                    onLoadedMetadata={this.actualizarDuracionTotal}
+                    onTimeUpdate={this.actualizarTiempoTranscurrido}
                     mp4="https://rubenmaier.github.io/api-simplificada-trailers-marvel/mp4/the-avengers.mp4"
                 />
             </Reproductor>

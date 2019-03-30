@@ -5,7 +5,7 @@ class VideoContenedor extends Component {
     setearReferencia = (elemento) => {
         this.video = elemento
     }
-    CambiarEstadoDeReproduccion = () => {
+    cambiarEstadoDeReproduccion = () => {
         if(this.props.pausa) {
             this.video.play() // le agrego la propiedad de play
         } else {
@@ -14,7 +14,7 @@ class VideoContenedor extends Component {
     }
     componentWillReceiveProps(proximasPropiedades) { // porque me llegan nuevas propiedades
         if(proximasPropiedades.pausa !== this.props.pausa) { // si cambio la propiedad respecto a lo que ya tenia, entonces...
-            this.CambiarEstadoDeReproduccion()
+            this.cambiarEstadoDeReproduccion()
         }
     }
     render() {
@@ -23,7 +23,8 @@ class VideoContenedor extends Component {
                 setearReferencia={this.setearReferencia}
                 sonido={this.props.sonido} 
                 autoreproduccion={this.props.autoreproduccion}
-                metadata={this.props.metadata}
+                onLoadedMetadata={this.props.onLoadedMetadata}
+                onTimeUpdate={this.props.onTimeUpdate}
                 mp4={this.props.mp4}
             />
         )

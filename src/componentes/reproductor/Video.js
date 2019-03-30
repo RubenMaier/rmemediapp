@@ -8,7 +8,8 @@ function Video (props) {
                 muted={props.sonido} // me inicializa el video pero muteado
                 autoPlay={props.autoreproduccion} // Se autoreproduce
                 //controls // le ponemos controles automaticos, pero nosotros vamos a crear los nuestros
-                onLoadedMetadata={props.metadata}
+                onLoadedMetadata={props.onLoadedMetadata} // funcion que nace del componte ReproductorContenedor llamada controlarMetadata
+                onTimeUpdate={props.onTimeUpdate}
                 src={props.mp4}
             />
         </div>
