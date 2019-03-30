@@ -6,6 +6,7 @@ import PlayPausa from './PlayPausa'
 import Tiempo from './Tiempo'
 import BarraDeControles from './BarraDeControles'
 import {formatearTiempo} from '../../utilidades/tiempo'
+import BarraDeProgreso from './BarraDeProgreso';
 
 class ReproductorContenedor extends Component {
     state = {
@@ -21,13 +22,16 @@ class ReproductorContenedor extends Component {
         // cuando la metadata sea cargada el "evento" contendrá quien disparo ese evento (en este caso es videoContenedor)
         this.video = evento.target // el target contiene el elemento del DOM que emitió el evento
         this.setState({
-            duracion: formatearTiempo(this.video.duration) // extraigo la duracion total del video y la almaceno en una variable local para actualizar la barra de controles
+            duracion: this.video.duration // extraigo la duracion total del video y la almaceno en una variable local para actualizar la barra de controles
         })
     }
     actualizarTiempoTranscurrido = (evento) => {
         this.setState({
-            tiempoTranscurrido: formatearTiempo(this.video.currentTime)
+            tiempoTranscurrido: this.video.currentTime
         })
+    }
+    actualizarProgreso = (evento) => {
+        this.video.currentTime = evento.target.value // cambio al tiempo transcurrido por el tiempo que elegí haciendo click
     }
     componentDidMount () {
         this.setState({
@@ -46,8 +50,13 @@ class ReproductorContenedor extends Component {
                         manejadorDeClick={this.cambiarEstadoDeReproduccion}
                     />
                     <Tiempo 
+                        duracion={formatearTiempo(this.state.duracion)}
+                        tiempoTranscurrido={formatearTiempo(this.state.tiempoTranscurrido)}
+                    />
+                    <BarraDeProgreso
                         duracion={this.state.duracion}
                         tiempoTranscurrido={this.state.tiempoTranscurrido}
+                        onChange={this.actualizarProgreso}
                     />
                 </BarraDeControles>
                 <VideoContenedor
