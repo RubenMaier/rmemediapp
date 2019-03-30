@@ -1,5 +1,6 @@
 import React from 'react'
 import Playlist from '../playlist/Playlist'
+
 function Categoria(props) {
     return (
         <div>

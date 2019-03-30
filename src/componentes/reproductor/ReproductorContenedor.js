@@ -3,14 +3,25 @@ import Reproductor from './Reproductor'
 import VideoContenedor from './VideoContenedor'
 import Titulo from './Titulo'
 import PlayPausa from './PlayPausa'
+import Tiempo from './Tiempo'
+import BarraDeControles from './BarraDeControles'
 
 class ReproductorContenedor extends Component {
     state = {
-        pausa: true
+        pausa: true,
+        duracion: 0
     }
     CambiarEstadoDeReproduccion = (evento) => {
         this.setState({
             pausa: !this.state.pausa
+        })
+    }
+    controlarMetadata = (evento) => {
+        // cuando la metadata sea cargada el "evento" contendrá quien disparo ese evento (en este caso es videoContenedor)
+        this.video = evento.target
+        console.log(evento.target)
+        this.setState({
+            duracion: this.video.duration
         })
     }
     componentDidMount () {
@@ -24,14 +35,20 @@ class ReproductorContenedor extends Component {
                 <Titulo 
                     titulo="Algo harcodeado"
                 />
-                <PlayPausa 
-                    pausa={this.state.pausa}
-                    manejadorDeClick={this.CambiarEstadoDeReproduccion}
-                />
+                <BarraDeControles>
+                    <PlayPausa 
+                        pausa={this.state.pausa}
+                        manejadorDeClick={this.CambiarEstadoDeReproduccion}
+                    />
+                    <Tiempo 
+                        duracion={this.state.duracion}
+                    />
+                </BarraDeControles>
                 <VideoContenedor
                     sonido={true}
                     autoreproduccion={this.props.autoreproduccion}
                     pausa={this.state.pausa}
+                    metadata={this.controlarMetadata}
                     mp4="https://rubenmaier.github.io/api-simplificada-trailers-marvel/mp4/the-avengers.mp4"
                 />
             </Reproductor>
