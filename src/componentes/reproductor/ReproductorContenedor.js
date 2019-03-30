@@ -7,11 +7,14 @@ import Tiempo from './Tiempo'
 import BarraDeControles from './BarraDeControles'
 import {formatearTiempo} from '../../utilidades/tiempo'
 import BarraDeProgreso from './BarraDeProgreso';
+import Spinner from './Spinner';
+import { throws } from 'assert';
 
 class ReproductorContenedor extends Component {
     state = {
         pausa: true,
-        duracion: 0
+        duracion: 0,
+        cargando: false
     }
     cambiarEstadoDeReproduccion = (evento) => {
         this.setState({
@@ -32,6 +35,16 @@ class ReproductorContenedor extends Component {
     }
     actualizarProgreso = (evento) => {
         this.video.currentTime = evento.target.value // cambio al tiempo transcurrido por el tiempo que elegí haciendo click
+    }
+    cargandoDatos = (evento) => {
+        this.setState({
+            cargando: true
+        })
+    }
+    CargaDeDatosFinalizada = (evento) => {
+        this.setState({
+            cargando: false
+        })
     }
     componentDidMount () {
         this.setState({
@@ -59,12 +72,17 @@ class ReproductorContenedor extends Component {
                         onChange={this.actualizarProgreso}
                     />
                 </BarraDeControles>
+                <Spinner
+                    cargando={this.state.cargando}
+                />
                 <VideoContenedor
                     sonido={true}
                     autoreproduccion={this.props.autoreproduccion}
                     pausa={this.state.pausa}
                     onLoadedMetadata={this.actualizarDuracionTotal}
                     onTimeUpdate={this.actualizarTiempoTranscurrido}
+                    onSeeking={this.cargandoDatos}
+                    onSeeked={this.CargaDeDatosFinalizada}
                     mp4="https://rubenmaier.github.io/api-simplificada-trailers-marvel/mp4/the-avengers.mp4"
                 />
             </Reproductor>

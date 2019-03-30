@@ -25,6 +25,8 @@ class VideoContenedor extends Component {
                 autoreproduccion={this.props.autoreproduccion}
                 onLoadedMetadata={this.props.onLoadedMetadata}
                 onTimeUpdate={this.props.onTimeUpdate}
+                onSeeking={this.props.onSeeking}
+                onSeeked={this.props.onSeeked}
                 mp4={this.props.mp4}
             />
         )

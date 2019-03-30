@@ -40,6 +40,7 @@ npm i prop-types
     - Creación de componente indicador de duración del tiempo y componente contenedor de botones de control
     - Añadido de tiempo transcurrido y formateo de tiempo
     - Creación del componente y la lógica de la barra de progreso del tiempo
+    - Creación del componente y la lógica del Spinner (Cargando)
 
 
 #Estructura de componentes
