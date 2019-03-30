@@ -9,12 +9,15 @@ import {formatearTiempo} from '../../utilidades/tiempo'
 import BarraDeProgreso from './BarraDeProgreso';
 import Spinner from './Spinner';
 import { throws } from 'assert';
+import Volumen from './Volumen';
 
 class ReproductorContenedor extends Component {
     state = {
         pausa: true,
         duracion: 0,
-        cargando: false
+        cargando: false,
+        volumen: 1,
+        volumenGuardado: 1
     }
     cambiarEstadoDeReproduccion = (evento) => {
         this.setState({
@@ -46,10 +49,22 @@ class ReproductorContenedor extends Component {
             cargando: false
         })
     }
-    componentDidMount () {
+    actualizarVolumen = (evento) => {
         this.setState({
-            pausa: (!this.props.autoreproduccion)
+            volumen: evento.target.value
         })
+        this.video.volume = this.state.volumen
+    }
+    actualizarVolumenPorClick = (evento) => {
+        if(this.state.volumen !== 0) {
+            this.setState({
+                volumenGuardado: this.state.volumen
+            })
+        }
+        this.setState({
+            volumen: this.state.volumen === 0 ? this.state.volumenGuardado : 0
+        })
+        this.video.volume = this.state.volumen
     }
     render() {
         return (
@@ -71,12 +86,16 @@ class ReproductorContenedor extends Component {
                         tiempoTranscurrido={this.state.tiempoTranscurrido}
                         onChange={this.actualizarProgreso}
                     />
+                    <Volumen 
+                        onChange={this.actualizarVolumen}
+                        onClick={this.actualizarVolumenPorClick}
+                    />
                 </BarraDeControles>
                 <Spinner
                     cargando={this.state.cargando}
                 />
                 <VideoContenedor
-                    sonido={true}
+                    sonido={false}
                     autoreproduccion={this.props.autoreproduccion}
                     pausa={this.state.pausa}
                     onLoadedMetadata={this.actualizarDuracionTotal}

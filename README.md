@@ -41,6 +41,7 @@ npm i prop-types
     - Añadido de tiempo transcurrido y formateo de tiempo
     - Creación del componente y la lógica de la barra de progreso del tiempo
     - Creación del componente y la lógica del Spinner (Cargando)
+    - Creación componente de para control de volumen y su correspondiente lógica
 
 
 #Estructura de componentes

@@ -14,7 +14,11 @@ class Media extends PureComponent {
         return ( // aca va a estar el html
             // sintaxis jsx -> escribo css dentro de un .js
             <div className="Media"> {/*no podemos utilizar el típico atributo "class" porque ahora son propiedades y class en javascript define una clase. Otra cosa, en formatos jsx tenemos que comentar asi como lo estoy haciendo, es un asco*/}
-                <div style={estilo.contenedor} onClick={this.props.menejoDelClick}> {/* En este caso agregamos el estilo sin la necesidad de importarlo. Por otro lado "enlazamos eventos del Dom" puesto que al hacerle click se ejecutara la funcion accionarDelClick*/}
+                <div 
+                    style={estilo.contenedor} 
+                    onClick={this.props.menejoDelClick}
+                > 
+                {/* En este caso agregamos el estilo sin la necesidad de importarlo. Por otro lado "enlazamos eventos del Dom" puesto que al hacerle click se ejecutara la funcion accionarDelClick*/}
                     <img
                         src={this.props.img}
                         alt=""
