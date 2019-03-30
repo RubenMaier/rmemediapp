@@ -6,14 +6,15 @@ import PlayPausa from './PlayPausa'
 import Tiempo from './Tiempo'
 import BarraDeControles from './BarraDeControles'
 import {formatearTiempo} from '../../utilidades/tiempo'
-import BarraDeProgreso from './BarraDeProgreso';
-import Spinner from './Spinner';
-import { throws } from 'assert';
-import Volumen from './Volumen';
+import BarraDeProgreso from './BarraDeProgreso'
+import Spinner from './Spinner'
+import Volumen from './Volumen'
+import PantallaCompleta from './PantallaCompleta'
+import {IsFullScreen, RequestFullScreen, ExitFullScreen} from '../../utilidades/fullscreen'
 
 class ReproductorContenedor extends Component {
     state = {
-        pausa: true,
+        pausa: false,
         duracion: 0,
         cargando: false,
         volumen: 1,
@@ -56,19 +57,27 @@ class ReproductorContenedor extends Component {
         this.video.volume = this.state.volumen
     }
     actualizarVolumenPorClick = (evento) => {
-        if(this.state.volumen !== 0) {
-            this.setState({
-                volumenGuardado: this.state.volumen
-            })
-        }
         this.setState({
+            volumenGuardado: this.state.volumen,
             volumen: this.state.volumen === 0 ? this.state.volumenGuardado : 0
         })
         this.video.volume = this.state.volumen
     }
+    ponerPantallaCompleta = (evento) => {
+        if(!IsFullScreen()) {
+            RequestFullScreen(this)
+        } else {
+            ExitFullScreen()
+        }
+    }
+    setearReferencia = (elemento) => {
+        this.player = elemento
+    }
     render() {
         return (
-            <Reproductor>
+            <Reproductor
+                setearReferencia={this.setearReferencia}
+            >
                 <Titulo 
                     titulo="Algo harcodeado"
                 />
@@ -89,6 +98,9 @@ class ReproductorContenedor extends Component {
                     <Volumen 
                         onChange={this.actualizarVolumen}
                         onClick={this.actualizarVolumenPorClick}
+                    />
+                    <PantallaCompleta 
+                        onClick={this.ponerPantallaCompleta}
                     />
                 </BarraDeControles>
                 <Spinner

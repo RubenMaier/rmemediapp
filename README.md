@@ -7,6 +7,7 @@
 npm i --save-dev babel-preset-react
 npm i react react-dom
 npm i prop-types
+npm i detect-browser
 ```
 
 `babel-preset-react` es un loader para poder trabajar con react.js en un archivo javascript convencional
@@ -42,6 +43,8 @@ npm i prop-types
     - Creación del componente y la lógica de la barra de progreso del tiempo
     - Creación del componente y la lógica del Spinner (Cargando)
     - Creación componente de para control de volumen y su correspondiente lógica
+    - Creación del componente y la lógica de FullScreen.
+    - Inclusión del modulo `detect-browser`
 
 
 #Estructura de componentes

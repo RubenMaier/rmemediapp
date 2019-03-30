@@ -1,7 +1,9 @@
 import React from 'react'
 
 const Repoductor = (props) => (
-    <div>
+    <div
+        ref={props.setearReferencia}
+    >
         {props.children}
     </div>
 )

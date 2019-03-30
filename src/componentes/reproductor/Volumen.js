@@ -6,8 +6,9 @@ function Volumen(props) {
         <button>
             <div onClick={props.onClick}>
                 <IconoVolumen 
+                    alto={25}
+                    ancho={25}
                     color="red"
-                    size={25}
                 />
             </div>
             <div>
