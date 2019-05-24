@@ -8,30 +8,25 @@ class Media extends PureComponent {
         this.props.menejoDelClick(this.props)
     }
     render() {
-        // también los estilos son creados como un objeto e insertados como "style" en las etiquetas html
-        const estilo = {
-            contenedor: {
-                fontSize: 14, // note que se usa camelCase porque no se puede escribir "front-size" en javascript, tampoco le escribo '14px' porque es un objeto json
-                border: '1px solid red'
-            }
-        }
-        return ( // aca va a estar el html
-            // sintaxis jsx -> escribo css dentro de un .js
-            <div className="Media"> {/*no podemos utilizar el típico atributo "class" porque ahora son propiedades y class en javascript define una clase. Otra cosa, en formatos jsx tenemos que comentar asi como lo estoy haciendo, es un asco*/}
+        return ( 
+            <div className="Media">
                 <div 
-                    style={estilo.contenedor} 
+                    className="ContenedorSuperior"
                     onClick={this.recibiUnClick}
-                > 
-                {/* En este caso agregamos el estilo sin la necesidad de importarlo. Por otro lado "enlazamos eventos del Dom" puesto que al hacerle click se ejecutara la funcion accionarDelClick*/}
+                >
                     <img
+                        className="Imagen"
                         src={this.props.img}
                         alt=""
                         width={210}
                         height={300}
                     />
-                    <h3>{this.props.titulo}</h3> {/* le ponemos this.state y no this.props para que podamos actualizarlo como vimos antes con la utlización de estados */}
-                    <p>{this.props.descripcion}</p>
                 </div>
+                <div className="ContenedorInferior">
+                    <p className="Titulo-Info">{this.props.titulo}</p> {/* le ponemos this.state y no this.props para que podamos actualizarlo como vimos antes con la utlización de estados */}
+                    <p className="Descripcion">{this.props.descripcion}</p>
+                </div>
+                    
             </div>
         )
     }

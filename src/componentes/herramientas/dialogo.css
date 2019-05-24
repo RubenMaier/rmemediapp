@@ -1,0 +1,32 @@
+.Dialogo {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100px;
+    background: black;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    border-radius: 10px;
+  }
+  
+  .Boton-Cerrar {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    rotate: 45deg;
+    right: -25px;
+    top: -25px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .Boton-Cerrar:after {
+    content: "+";
+    font-weight: bold;
+    font-size: 30px;
+  }

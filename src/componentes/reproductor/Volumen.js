@@ -1,17 +1,18 @@
 import React from 'react'
 import IconoVolumen from '../iconos/Volumen'
+import './volumen.css'
 
 function Volumen(props) {
     return (
-        <button>
+        <button className="Volumen">
             <div onClick={props.onClick}>
                 <IconoVolumen 
-                    alto={25}
-                    ancho={25}
-                    color="red"
+                    alto={20}
+                    ancho={20}
+                    color="whitesmoke"
                 />
             </div>
-            <div>
+            <div className="Rango">
                 <input 
                     type="range" 
                     min={0}

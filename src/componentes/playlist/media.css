@@ -1,7 +1,46 @@
 .Media {
-    cursor: pinter;
-    margin-right:15px;
-    display:inline-block;
-    width:210px;
-    vertical-align: top;
+    cursor: pointer;
+    margin-right:30px;  /*| le indico a que distancia va a estar respecto a otros elementos iguales a sus costados |*/
+    display:inline-block; /*| pone cada bloque en una misma linea |*/
+    width:210px; /*| le indico el ancho maximo que puede tener |*/
+    vertical-align: top; /*| pone a toda una misma linea a la misma altura respecto a la parte superior  |*/
+    background-color: white;
+    border: 1px solid black;  /*| me agrega un borde de color negro y con lineas |*/
+    border-radius: 10px;
+}
+.ContenedorSuperior {
+}
+
+.Imagen {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.Titulo-Info {
+    padding: 0px 10px 0px 10px;
+    color: #de5d54;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.ContenedorInferior {
+    display: none;
+}
+
+.Descripcion {
+    padding: 0px 20px 5px 20px;
+    color:#538785;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    text-align: center;
+}
+
+.Media:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,.3); /*| le añado una sombra cuando coloco el mouse por encima |*/
+}
+.Media:hover .ContenedorInferior {
+    display: block;
 }

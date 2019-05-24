@@ -1,0 +1,11 @@
+.Categoria {
+}
+  
+.Categoria-titulo {
+  text-transform: uppercase;
+  color: #de5d54;
+  margin: 10px 0 10px 0;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: Arial;
+}

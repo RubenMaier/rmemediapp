@@ -1,8 +1,9 @@
 import React from 'react'
+import './video.css'
 
 function Video (props) {
     return (
-        <div>
+        <div className="Video">
             <video 
                 ref={props.setearReferencia}
                 muted={props.sonido} // me inicializa el video pero muteado

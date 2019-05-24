@@ -1,10 +1,11 @@
 import React from 'react'
 import Categoria from './categoria'
 import BuscadorContenedor from '../herramientas/BuscadorContenedor'
+import './categorias.css'
 
 function Categorias(props) {
     return (
-        <div>
+        <div className="Categorias">
             <BuscadorContenedor />
             {
                 props.categorias.map((item) => {

@@ -1,8 +1,9 @@
 import React from 'react'
+import './barra-de-controles.css'
 
 function BarraDeControles (props) {
     return (
-        <div>
+        <div className="BarraDeControles">
             {props.children}
         </div>
     )

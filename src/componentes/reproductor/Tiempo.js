@@ -1,8 +1,9 @@
 import React from 'react'
+import './tiempo.css'
 
 function Tiempo(props) {
     return (
-        <div>
+        <div className="Tiempo">
             <p>
                 <span>{props.tiempoTranscurrido} | {props.duracion}</span>
             </p>

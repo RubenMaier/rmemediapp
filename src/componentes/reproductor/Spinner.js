@@ -1,9 +1,10 @@
 import React from 'react'
+import './spinner.css'
 
 function Spinner (props) {
     if(!props.cargando) return null
     return (
-        <div>
+        <div className="Spinner">
             <span>Cargando...</span>
         </div>
     )

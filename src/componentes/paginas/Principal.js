@@ -1,8 +1,9 @@
 import React from 'react'
+import './principal.css'
 
 function Principal(props) {
     return (
-        <section>
+        <section className="Principal">
             {props.children}
         </section>
     )
